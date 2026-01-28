@@ -29,6 +29,7 @@ if c_bmi:
             st.sidebar.success(f"Your BMI value is {b:.2f}")
         else:
             st.sidebar.error(f"Your BMI value is {b:.2f}")
+            
 Bmi = st.number_input("Enter BMI",min_value=0.0,max_value = 100.0)
 HbA1c = st.number_input("Enter HbA1c_level",min_value=1.0,max_value = 14.0)
 Glucose = st.number_input("Enter Blood Glucose Level",step=1)
@@ -61,3 +62,4 @@ if st.button("Check for Diabetes"):
         st.error("You Have Diabetes...!\nConsult a Doctor Immediately")
     else:
         st.success("---You Don't Have Diabetes--- \n Keep a Healthy Routine to stay safe")
+
