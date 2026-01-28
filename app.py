@@ -11,7 +11,7 @@ scaler = joblib.load("scaler.pkl")
 st.set_page_config(page_title="Diabetes Predictions")
 st.title("Diabetes Prediction App")
 st.write("Use this prediction tool to find diabetes")
-image = st.image(r"C:\Users\sakth\Anaconda\Diabetes_ete\image_diabetes.png")
+image = st.image("image_diabetes.png")
 
 # Inputs
 Gender = st.selectbox("Gender",["male","female"])
@@ -29,9 +29,8 @@ if c_bmi:
             st.sidebar.success(f"Your BMI value is {b:.2f}")
         else:
             st.sidebar.error(f"Your BMI value is {b:.2f}")
-
-Bmi = st.number_input("Enter BMI",min_value=0,max_value = 100)
-HbA1c = st.number_input("Enter HbA1c_level",min_value=1,max_value = 14)
+Bmi = st.number_input("Enter BMI",min_value=0.0,max_value = 100.0)
+HbA1c = st.number_input("Enter HbA1c_level",min_value=1.0,max_value = 14.0)
 Glucose = st.number_input("Enter Blood Glucose Level",step=1)
 
 # Encode inputs
